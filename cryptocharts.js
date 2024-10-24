@@ -15,7 +15,7 @@ var ReconnectingWebSocket = require('reconnecting-websocket');
 
 config.read('config.ini');
 
-var rws     = new ReconnectingWebSocket('wss://ws-feed.pro.coinbase.com', [], {constructor: WebSocket});
+var rws     = new ReconnectingWebSocket('wss://ws-feed.exchange.coinbase.com', [], {constructor: WebSocket});
 var pairs   = config.sections();
 var limiter = new RateLimiter(3, 'second');
 var screen  = blessed.screen()
